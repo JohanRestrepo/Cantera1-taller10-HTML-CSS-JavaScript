@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>taller3</title>
+    <link rel="stylesheet" href="../css/estilos.css" >
+    <script src="../js/logica.js"></script>
+</head>
+<body class="talleres">
+    <div class="container">
+        <h1 class="titulo">Taller de PSeInt #3: Ciclos</h1>
+        <br>
+
+        <p class="pregunta"><strong>1.</strong> Realizar la siguiente figura por medio del ciclo Para
+        <br>
+        <br>
+        *
+        <br>
+        **
+        <br>
+        ***
+        <br>
+        ****
+        <br>
+        *****
+        <br>
+        ******
+        <br>
+        *******
+        <br>
+        ********
+        <br>
+        *********
+        <br>
+        **********
+        
+        </p>
+        <pre><code>
+        Proceso sin_titulo
+            Definir control1 Como Entero;
+            Definir rama Como Caracter;
+            rama <- "*";
+            Para control1 <- 1 Hasta 10 Con Paso 1 Hacer
+                Escribir rama;
+                rama <- Concatenar(rama,'*');
+            FinPara
+        FinProceso
+        </code></pre>
+        <br>
+
+        <p class="pregunta"><strong>2.</strong> Realizar la siguiente figura por medio del ciclo Mientras – Hacer
+        <br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;****
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*****
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;******
+        <br>
+        &nbsp;&nbsp;&nbsp;*******
+        <br>
+        &nbsp;&nbsp;********
+        <br>
+        &nbsp;*********
+        <br>
+        **********
+
+        </p>
+        <pre><code>
+        Proceso sin_titulo
+            Definir control Como Logico;
+            Definir incremento Como Entero;
+            Definir rama Como Caracter;
+            Definir espacios Como Caracter;
+            Definir numeroEspacios Como Entero;
+            Definir meta Como Entero;
+            
+            rama <- "*";
+            control <- Verdadero;
+            incremento <- 1;
+            numeroEspacios <- 10;
+            
+            Mientras control = Verdadero Hacer
+                
+                meta <- 1;
+                espacios <- " ";
+                Mientras meta < numeroEspacios Hacer
+                    espacios <- Concatenar(" " , espacios);
+                    meta <- meta + 1;
+                FinMientras
+                
+                
+                Escribir espacios , rama;
+                Si incremento >= 10 Entonces
+                    control <- falso;
+                FinSi
+                
+                rama <- Concatenar(rama,'*');
+                incremento <- incremento + 1;
+                numeroEspacios <- numeroEspacios - 1;
+            FinMientras
+        FinProceso
+        </code></pre>
+        <br>
+
+        <p class="pregunta"><strong>3.</strong> Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que
+        <br>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*****
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*******
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*********
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;***********
+        <br>
+        &nbsp;&nbsp;&nbsp;*************
+        <br>
+        &nbsp;&nbsp;***************
+        <br>
+        &nbsp;*****************
+        <br>
+        *******************
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*****
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*******
+
+        </p>
+        <pre><code>
+        Proceso sin_titulo
+	
+            Definir control Como Logico;
+            Definir incremento Como Entero;
+            Definir espacios Como Caracter;
+            Definir numeroEspacios Como Entero;
+            Definir meta Como Entero;
+            Definir rama Como Caracter;
+            
+            control <- Verdadero;
+            incremento <- 1;
+            numeroEspacios <- 9;
+            rama <- "*";
+            
+            Escribir "          ",rama;
+            Repetir
+                
+                meta <- 1;
+                espacios <- " ";
+                Mientras meta < numeroEspacios Hacer
+                    espacios <- Concatenar(" " , espacios);
+                    meta <- meta + 1;
+                FinMientras
+                
+                rama <- Concatenar("*", rama);
+                rama <- Concatenar(rama, "*");
+                Escribir espacios , rama;
+                
+                incremento <- incremento + 1;
+                Si incremento >= 10 Entonces
+                    control <- Falso;
+                FinSi
+                numeroEspacios <- numeroEspacios - 1;
+            Hasta Que control = Falso
+            
+            Escribir("         ***");
+            Escribir("         ***");
+            Escribir("        *****");
+            Escribir("       *******");
+            
+        FinProceso
+
+        </code></pre>
+        <br>
+
+        <p class="pregunta"><strong>4.</strong> Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por medio del ciclo Para; esta debe ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea crear la tabla del 5, entonces el resultado debería ser el siguiente:
+        <br>
+        <br>
+        1 x 5 = 5
+        <br>
+        2 x 5 = 10
+        <br>
+        3 x 5 = 15
+        <br>
+        4 x 5 = 20
+        <br>
+        5 x 5 = 25
+        <br>
+        6 x 5 = 30
+        <br>
+        7 x 5 = 35
+        <br>
+        8 x 5 = 40
+        <br>
+        9 x 5 = 45
+        <br>
+        10 x 5 = 50
+        
+        </p>
+        <pre><code>
+        Proceso sin_titulo
+	
+            Definir multiplicado Como Entero;
+            Definir multiplicador Como Entero;
+            Definir resultado Como Entero;
+            
+            resultado <- 0;
+            
+            Escribir "Ingresa el numero de la tabla que deseas ganerar";
+            leer multiplicado;
+            
+            Para multiplicador <- 1 Hasta 10 Con Paso 1 Hacer
+                resultado <- multiplicador * multiplicado;
+                Escribir multiplicador, " x ", multiplicado, " = ", resultado;
+            FinPara
+            
+        FinProceso
+        </code></pre>
+        <br>
+
+        <p class="pregunta"><strong>5.</strong> Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.
+        <br>
+        Menu de usuario
+        <br>
+        1 Captura de nombre
+        <br>
+        2 Saludar persona
+        <br>
+        3 Salir del sistema
+        </p>
+        <pre><code>
+        Proceso sin_titulo
+	
+            Definir control Como Logico;
+            Definir nombre Como Caracter;
+            Definir nombreTomado Como Logico;
+            Definir opcion Como Entero;
+            control <- Verdadero;
+            nombreTomado <- Falso;
+            
+            Mientras control = Verdadero Hacer
+                
+                Escribir "¿Que deseas hacer el dia de hoy?";
+                Escribir "1. capturar nombre";
+                Escribir "2. Saludar persona";
+                Escribir "3. Salir del sistema";
+                Leer opcion;
+                
+                Segun opcion Hacer
+                    1:
+                        Escribir "Por favor diligencia tu nombre";
+                        leer nombre;
+                        nombreTomado <- Verdadero;
+                    2:
+                        Si nombreTomado Entonces
+                            Escribir "Hola ", nombre, ", ¿como estas?";
+                        SiNo
+                            Escribir "¿Quien eres tu?";
+                        FinSi
+                    3:	
+                        control <- Falso;
+                FinSegun
+            FinMientras
+            
+        FinProceso
+        </code></pre>
+        <br>
+
+        <p class="pregunta"><strong>6.</strong> Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.</p>
+        <pre><code>
+        Proceso sin_titulo
+	
+            Definir nombreCompleto1 Como Caracter;
+            Definir telefono1 Como Caracter;
+            Definir organizacion1 Como Caracter;
+            Definir contacto1 Como Logico;
+            
+            Definir nombreCompleto2 Como Caracter;
+            Definir telefono2 Como Caracter;
+            Definir organizacion2 Como Caracter;
+            Definir contacto2 Como Logico;
+            
+            Definir nombreCompleto3 Como Caracter;
+            Definir telefono3 Como Caracter;
+            Definir organizacion3 Como Caracter;
+            Definir contacto3 Como Logico;
+            
+            Definir nombreDummy Como Caracter;
+            Definir telefonoDummy Como Caracter;
+            Definir organizacionDummy Como Caracter;
+            
+            Definir control Como Logico;
+            Definir repetido Como Logico;
+            Definir memoria Como Entero;
+            Definir opcion Como Entero;
+            
+            contacto1 <- Falso;
+            contacto2 <- Falso;
+            contacto3 <- Falso;
+            
+            memoria <- 0;
+            control <- Verdadero;
+            
+            Mientras control = Verdadero Hacer
+            
+                Escribir "¿Que deseas hacer ahora?";
+                Escribir "1. Guardar contacto";
+                Escribir "2. Buscar contacto";
+                Escribir "3. Eliminar contacto";
+                Escribir "4. Salir";
+                Leer opcion;
+                
+                Segun opcion Hacer
+                    1:
+                        Si memoria < 3 Entonces
+                            
+                            repetido <- Falso;
+                            Escribir "Ingresa el telefono del contacto";
+                            Leer telefonoDummy;
+                            
+                            Si contacto1 Entonces
+                                Si telefono1 = telefonoDummy Entonces
+                                    Escribir "Ya hay un contacto con ese numero";
+                                    repetido <- Verdadero;
+                                FinSi
+                            FinSi
+                            
+                            Si contacto2 Entonces
+                                Si telefono2 = telefonoDummy Entonces
+                                    Escribir "Ya hay un contacto con ese numero";
+                                    repetido <- Verdadero;
+                                FinSi
+                            FinSi
+                            
+                            Si contacto3 Entonces
+                                Si telefono3 = telefonoDummy Entonces
+                                    Escribir "Ya hay un contacto con ese numero";
+                                    repetido <- Verdadero;
+                                FinSi
+                            FinSi
+                            
+                            Si repetido = falso Entonces
+                                
+                                Escribir "Ingresa el nombre del contacto";
+                                Leer nombreDummy;
+                                Escribir "Ingresa la organizacion del contacto";
+                                Leer organizacionDummy;
+                                
+                                Si contacto1 = Falso Entonces
+                                    nombreCompleto1 <- nombreDummy;
+                                    telefono1 <- telefonoDummy;
+                                    organizacion1 <- organizacionDummy;
+                                    contacto1 <- Verdadero;
+                                    memoria <- memoria + 1;
+                                SiNo
+                                    Si contacto2 = Falso Entonces
+                                        nombreCompleto2 <- nombreDummy;
+                                        telefono2 <- telefonoDummy;
+                                        organizacion2 <- organizacionDummy;
+                                        contacto2 <- Verdadero;
+                                        memoria <- memoria + 1;
+                                    SiNo
+                                        nombreCompleto3 <- nombreDummy;
+                                        telefono3 <- telefonoDummy;
+                                        organizacion3 <- organizacionDummy;
+                                        contacto3 <- Verdadero;
+                                        memoria <- memoria + 1;
+                                    FinSi
+                                FinSi
+                            FinSi
+                            
+                        SiNo
+                            Escribir "No hay suficiente memoria";
+                        FinSi
+                    2:
+                        Escribir "Ingresa el nombre del contacto que deseas buscar";
+                        Leer nombreDummy;
+                        
+                        repetido <- falso;
+                        
+                        Si contacto1 Entonces
+                            Si nombreCompleto1 = nombreDummy Entonces
+                                telefonoDummy <- telefono1;
+                                organizacionDummy <- organizacion1;
+                                repetido <- Verdadero;
+                            FinSi
+                        FinSi
+                        
+                        Si contacto2 Entonces
+                            Si nombreCompleto2 = nombreDummy Entonces
+                                telefonoDummy <- telefono2;
+                                organizacionDummy <- organizacion2;
+                                repetido <- Verdadero;
+                            FinSi
+                        FinSi
+                        
+                        Si contacto3 Entonces
+                            Si nombreCompleto3 = nombreDummy Entonces
+                                telefonoDummy <- telefono3;
+                                organizacionDummy <- organizacion3;
+                                repetido <- Verdadero;
+                            FinSi
+                        FinSi
+                        
+                        Si repetido Entonces
+                            Escribir "Contacto encontrado:";
+                            Escribir "Nombre: ", nombreDummy, " Telefono: ", telefonoDummy, " Organizacion: " , organizacionDummy;
+                        SiNo
+                            Escribir "No existe un contacto con el nombre: ",nombreDummy;
+                        FinSi
+                        
+                    3:	
+                        Escribir "Ingresa el nombre del contacto que deseas eliminar";
+                        Leer nombreDummy;
+                        
+                        repetido <- falso;
+                        
+                        Si contacto1 Entonces
+                            Si nombreCompleto1 = nombreDummy Entonces
+                                contacto1 <- Falso;
+                                memoria <- memoria - 1;
+                                repetido <- Verdadero;
+                            FinSi
+                        FinSi
+                        Si contacto2 Entonces
+                            Si nombreCompleto2 = nombreDummy Entonces
+                                contacto2 <- Falso;
+                                memoria <- memoria - 1;
+                                repetido <- Verdadero;
+                            FinSi
+                        FinSi
+                        Si contacto3 Entonces
+                            Si nombreCompleto3 = nombreDummy Entonces
+                                contacto3 <- Falso;
+                                memoria <- memoria - 1;
+                                repetido <- Verdadero;
+                            FinSi
+                        FinSi
+                        
+                        Si repetido Entonces
+                            Escribir "Contacto eliminado con exito";
+                        SiNo
+                            Escribir "No hay ningun contacto con ese nombre";
+                        FinSi
+                    4:
+                        control <- Falso;
+                    De Otro Modo:
+                        Escribir "Opcion elegida no existe";
+                FinSegun
+                
+            FinMientras
+                
+        FinProceso
+        </code></pre>
+        <br>
+
+        <p class="pregunta"><strong>7.</strong> El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.</p>
+        <pre><code>
+        Proceso sin_titulo
+	
+            Definir placa1 Como Caracter;
+            Definir marca1 Como Caracter;
+            Definir nombreCompleto1 Como Caracter;
+            Definir telefono1 Como Caracter;
+            Definir slot1 Como Logico;
+            
+            Definir placa2 Como Caracter;
+            Definir marca2 Como Caracter;
+            Definir nombreCompleto2 Como Caracter;
+            Definir telefono2 Como Caracter;
+            Definir slot2 Como Logico;
+            
+            Definir placa3 Como Caracter;
+            Definir marca3 Como Caracter;
+            Definir nombreCompleto3 Como Caracter;
+            Definir telefono3 Como Caracter;
+            Definir slot3 Como Logico;
+            
+            Definir placa4 Como Caracter;
+            Definir marca4 Como Caracter;
+            Definir nombreCompleto4 Como Caracter;
+            Definir telefono4 Como Caracter;
+            Definir slot4 Como Logico;
+            
+            Definir placa5 Como Caracter;
+            Definir marca5 Como Caracter;
+            Definir nombreCompleto5 Como Caracter;
+            Definir telefono5 Como Caracter;
+            Definir slot5 Como Logico;
+            
+            Definir placaDummy Como Caracter;
+            Definir marcaDummy Como Caracter;
+            Definir nombreCompletoDummy Como Caracter;
+            Definir telefonoDummy Como Caracter;
+            
+            Definir control Como Logico;
+            Definir repetido Como Logico;
+            Definir espacio Como Entero;
+            Definir opcion Como Entero;
+            slot1 <- Falso;
+            slot2 <- Falso;
+            slot3 <- Falso;
+            slot4 <- Falso;
+            slot5 <- Falso;
+            
+            espacio <- 0;
+            control <- Verdadero;
+            
+            Mientras control Hacer
+                
+                Escribir "¿Que deseas hacer ahora?";
+                Escribir "1. Ingresar al parqueadero";
+                Escribir "2. Retirar del parqueadero";
+                Escribir "3. Consultar Vehiculo";
+                Escribir "4. Salir";
+                Leer opcion;
+                
+                Segun opcion Hacer
+                    1:
+                        Si espacio < 5 Entonces
+                            
+                            Escribir "Ingresa la placa del vehiculo";
+                            Leer placaDummy;
+                            Escribir "Ingresa la marca del vehiculo";
+                            Leer marcaDummy;
+                            Escribir "Ingresa el nombre completo del dueño";
+                            Leer nombreCompletoDummy;
+                            Escribir "Ingresa el telefono del dueño";
+                            Leer telefonoDummy;
+                            
+                            Si slot1 = Falso Entonces
+                                placa1 <- placaDummy;
+                                marca1 <- marcaDummy;
+                                nombreCompleto1<- nombreCompletoDummy;
+                                telefono1 <- telefonoDummy;
+                                slot1 <- Verdadero;
+                                espacio <- espacio + 1;
+                            SiNo
+                                Si slot2 = Falso Entonces
+                                    placa2 <- placaDummy;
+                                    marca2 <- marcaDummy;
+                                    nombreCompleto2<- nombreCompletoDummy;
+                                    telefono2 <- telefonoDummy;
+                                    slot2 <- Verdadero;
+                                    espacio <- espacio + 1;
+                                SiNo
+                                    Si slot3 = Falso Entonces
+                                        placa3 <- placaDummy;
+                                        marca3 <- marcaDummy;
+                                        nombreCompleto3 <- nombreCompletoDummy;
+                                        telefono3 <- telefonoDummy;
+                                        slot3 <- Verdadero;
+                                        espacio <- espacio + 1;
+                                    SiNo
+                                        Si slot4 = Falso Entonces
+                                            placa4 <- placaDummy;
+                                            marca4 <- marcaDummy;
+                                            nombreCompleto4 <- nombreCompletoDummy;
+                                            telefono4 <- telefonoDummy;
+                                            slot4 <- Verdadero;
+                                            espacio <- espacio + 1;
+                                        SiNo
+                                            placa5 <- placaDummy;
+                                            marca5 <- marcaDummy;
+                                            nombreCompleto5 <- nombreCompletoDummy;
+                                            telefono5 <- telefonoDummy;
+                                            slot5 <- Verdadero;
+                                            espacio <- espacio + 1;
+                                        FinSi
+                                    FinSi
+                                FinSi
+                            FinSi
+                        SiNo
+                            Escribir "El parqueadero esta lleno";
+                        FinSi
+                    2:
+                        repetido <- Falso;
+                        
+                        Escribir "Ingresa la placa del vehiculo que deseas retirar";
+                        Leer placaDummy;
+                        
+                        Si slot1 Entonces
+                            Si placaDummy = placa1 Entonces
+                                slot1 <- Falso;
+                                espacio <- espacio - 1;
+                                repetido <- Verdadero;
+                            FinSi
+                        FinSi
+                        Si slot2 Entonces
+                            Si placaDummy = placa2 Entonces
+                                slot2 <- Falso;
+                                espacio <- espacio - 1;
+                                repetido <- Verdadero;
+                            FinSi
+                        FinSi
+                        Si slot3 Entonces
+                            Si placaDummy = placa3 Entonces
+                                slot3 <- Falso;
+                                espacio <- espacio - 1;
+                                repetido <- Verdadero;
+                            FinSi
+                        FinSi
+                        Si slot4 Entonces
+                            Si placaDummy = placa4 Entonces
+                                slot4 <- Falso;
+                                espacio <- espacio - 1;
+                                repetido <- Verdadero;
+                            FinSi
+                        FinSi
+                        Si slot5 Entonces
+                            Si placaDummy = placa5 Entonces
+                                slot5 <- Falso;
+                                espacio <- espacio - 1;
+                                repetido <- Verdadero;
+                            FinSi
+                        FinSi
+                        
+                        Si repetido Entonces
+                            Escribir "Vehiculo retirado con exito";
+                        SiNo
+                            Escribir "No existe ningun vehiculo con esa placa en el parqueadero";
+                        FinSi
+                    3:
+                    
+                        repetido <- Falso;
+                        
+                        Escribir "Ingresa la placa del vehiculo que deseas consultar";
+                        Leer placaDummy;
+                        
+                        Si slot1 Entonces
+                            Si placaDummy = placa1 Entonces
+                                marcaDummy <- marca1;
+                                nombreCompletoDummy <- nombreCompleto1;
+                                telefonoDummy <- telefono1;
+                                repetido <- Verdadero;
+                            FinSi
+                        FinSi
+                        Si slot2 Entonces
+                            Si placaDummy = placa2 Entonces
+                                marcaDummy <- marca2;
+                                nombreCompletoDummy <- nombreCompleto2;
+                                telefonoDummy <- telefono2;
+                                repetido <- Verdadero;
+                            FinSi
+                        FinSi
+                        Si slot3 Entonces
+                            Si placaDummy = placa3 Entonces
+                                marcaDummy <- marca3;
+                                nombreCompletoDummy <- nombreCompleto3;
+                                telefonoDummy <- telefono3;
+                                repetido <- Verdadero;
+                            FinSi
+                        FinSi
+                        Si slot4 Entonces
+                            Si placaDummy = placa4 Entonces
+                                marcaDummy <- marca4;
+                                nombreCompletoDummy <- nombreCompleto4;
+                                telefonoDummy <- telefono4;
+                                repetido <- Verdadero;
+                            FinSi
+                        FinSi
+                        Si slot5 Entonces
+                            Si placaDummy = placa5 Entonces
+                                marcaDummy <- marca5;
+                                nombreCompletoDummy <- nombreCompleto5;
+                                telefonoDummy <- telefono5;
+                                repetido <- Verdadero;
+                            FinSi
+                        FinSi
+                        
+                        Si repetido Entonces
+                            Escribir "El vehiculo se encuentra en el parqueadero";
+                            Escribir "Placa: ", placaDummy;
+                            Escribir "Marca: ", marcaDummy;
+                            Escribir "Nombre del dueño: ", nombreCompletoDummy;
+                            Escribir "Telefono del dueño: ", telefonoDummy;
+                        SiNo
+                            Escribir "Vehiculo no encontrado en el sistema";
+                        FinSi
+                    4:
+                        control <- Falso;
+                FinSegun
+            FinMientras
+        FinProceso
+
+        </code></pre>
+        <br>
+
+        <p class="pregunta"><strong>8.</strong> La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.</p>
+        <pre><code>
+        Proceso sin_titulo
+	
+            Definir nombreUsuario1 Como Caracter;
+            Definir resultados1 Como Caracter;
+            Definir ingreso1 Como Logico;
+            
+            Definir nombreUsuario2 Como Caracter;
+            Definir resultados2 Como Caracter;
+            Definir ingreso2 Como Logico;
+            
+            Definir nombreUsuario3 Como Caracter;
+            Definir resultados3 Como Caracter;
+            Definir ingreso3 Como Logico;
+            
+            Definir nombreUsuario4 Como Caracter;
+            Definir resultados4 Como Caracter;
+            Definir ingreso4 Como Logico;
+            
+            Definir nombreUsuario5 Como Caracter;
+            Definir resultados5 Como Caracter;
+            Definir ingreso5 Como Logico;
+            
+            Definir nombreUsuario6 Como Caracter;
+            Definir resultados6 Como Caracter;
+            Definir ingreso6 Como Logico;
+            
+            Definir nombreUsuario7 Como Caracter;
+            Definir resultados7 Como Caracter;
+            Definir ingreso7 Como Logico;
+            
+            Definir nombreUsuario8 Como Caracter;
+            Definir resultados8 Como Caracter;
+            Definir ingreso8 Como Logico;
+            
+            Definir nombreUsuarioDummy Como Caracter;
+            Definir resultadosDummy Como Caracter;
+            
+            Definir control Como Logico;
+            Definir repetido Como Logico;
+            Definir cupo Como Entero;
+            Definir opcion Como Entero;
+            
+            ingreso1 <- Falso;
+            ingreso2 <- Falso;
+            ingreso3 <- Falso;
+            ingreso4 <- Falso;
+            ingreso5 <- Falso;
+            ingreso6 <- Falso;
+            ingreso7 <- Falso;
+            ingreso8 <- Falso;
+            
+            cupo <- 0;
+            control <- Verdadero;
+            
+            Mientras control Hacer
+                
+                Escribir "¿Que deseas hacer ahora?";
+                Escribir "1. Ingresar usuario";
+                Escribir "2. Listar usuarios";
+                Escribir "3. Salir";
+                Leer opcion;
+                
+                Segun opcion Hacer
+                    1:
+                        Si cupo < 8 Entonces
+                            Escribir "Ingresa el nombre del usuario";
+                            Leer nombreUsuarioDummy;
+                            Escribir "Ingresa los resultados del usuario";
+                            Leer resultadosDummy;
+                            
+                            Si ingreso1 = Falso Entonces
+                                nombreUsuario1 <- nombreUsuarioDummy;
+                                resultados1 <- resultadosDummy;
+                                ingreso1 <- Verdadero;
+                                cupo <- cupo +1;
+                            SiNo
+                                Si ingreso2 = Falso Entonces
+                                    nombreUsuario2 <- nombreUsuarioDummy;
+                                    resultados2 <- resultadosDummy;
+                                    ingreso2 <- Verdadero;
+                                    cupo <- cupo +1;
+                                SiNo
+                                    Si ingreso3 = Falso Entonces
+                                        nombreUsuario3 <- nombreUsuarioDummy;
+                                        resultados3 <- resultadosDummy;
+                                        ingreso3 <- Verdadero;
+                                        cupo <- cupo +1;
+                                    SiNo
+                                        Si ingreso4 = Falso Entonces
+                                            nombreUsuario4 <- nombreUsuarioDummy;
+                                            resultados4 <- resultadosDummy;
+                                            ingreso4 <- Verdadero;
+                                            cupo <- cupo +1;
+                                        SiNo
+                                            Si ingreso5 = Falso Entonces
+                                                nombreUsuario5 <- nombreUsuarioDummy;
+                                                resultados5 <- resultadosDummy;
+                                                ingreso5 <- Verdadero;
+                                                cupo <- cupo +1;
+                                            SiNo
+                                                Si ingreso6 = Falso Entonces
+                                                    nombreUsuario6 <- nombreUsuarioDummy;
+                                                    resultados6 <- resultadosDummy;
+                                                    ingreso6 <- Verdadero;
+                                                    cupo <- cupo +1;
+                                                SiNo
+                                                    Si ingreso7 = Falso Entonces
+                                                        nombreUsuario7 <- nombreUsuarioDummy;
+                                                        resultados7 <- resultadosDummy;
+                                                        ingreso7 <- Verdadero;
+                                                        cupo <- cupo +1;
+                                                    SiNo
+                                                        nombreUsuario8 <- nombreUsuarioDummy;
+                                                        resultados8 <- resultadosDummy;
+                                                        ingreso8 <- Verdadero;
+                                                        cupo <- cupo +1;
+                                                    FinSi
+                                                FinSi
+                                            FinSi
+                                        FinSi
+                                    FinSi
+                                FinSi
+                            FinSi
+                        SiNo
+                            Escribir "Ya el curso esta lleno";
+                        FinSi
+                    2:
+                        Si ingreso1 O ingreso2 O ingreso3 O ingreso4 O ingreso5 O ingreso6 O ingreso7 O ingreso8 Entonces
+                            Escribir "Usuarios inscritos en el programa:";
+                        SiNo
+                            Escribir "No hay usuarios en el sistema";
+                        FinSi
+                        si ingreso1 Entonces
+                            Escribir "El usuario: ", nombreUsuario1, " Actualmente se encuentra: ", resultados1;
+                        FinSi
+                        si ingreso2 Entonces
+                            Escribir "El usuario: ", nombreUsuario2, " Actualmente se encuentra: ", resultados2;
+                        FinSi
+                        si ingreso3 Entonces
+                            Escribir "El usuario: ", nombreUsuario3, " Actualmente se encuentra: ", resultados3;
+                        FinSi
+                        si ingreso4 Entonces
+                            Escribir "El usuario: ", nombreUsuario4, " Actualmente se encuentra: ", resultados4;
+                        FinSi
+                        si ingreso5 Entonces
+                            Escribir "El usuario: ", nombreUsuario5, " Actualmente se encuentra: ", resultados5;
+                        FinSi
+                        si ingreso6 Entonces
+                            Escribir "El usuario: ", nombreUsuario6, " Actualmente se encuentra: ", resultados6;
+                        FinSi
+                        si ingreso7 Entonces
+                            Escribir "El usuario: ", nombreUsuario7, " Actualmente se encuentra: ", resultados7;
+                        FinSi
+                        si ingreso8 Entonces
+                            Escribir "El usuario: ", nombreUsuario8, " Actualmente se encuentra: ", resultados8;
+                        FinSi
+                    3:
+                        control <- Falso;
+                FinSegun
+                
+            FinMientras
+            
+        FinProceso
+
+        </code></pre>
+        <br>
+        <h3 class="titulo3">Video explicativo</h3>
+        <br>
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/hLjvlfIlW9U?si=y75Sm_Tm3LMSTt9a" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <nav>
+            <table width=100%>
+                <tr>
+                    <td width=33%><a href="./taller2.html" style="text-decoration: none;"><button>Anterior Taller</button></a></td>
+                    <td width=33%><a href="../index.html" style="text-decoration: none;"><button>Inicio</button></a></td>
+                    <td width=33%><a href="./taller4.html" style="text-decoration: none;"><button>Siguiente Taller</button></a></td>
+                </tr>
+            </table>
+        </nav>
+    </div>
+</body>
+</html>

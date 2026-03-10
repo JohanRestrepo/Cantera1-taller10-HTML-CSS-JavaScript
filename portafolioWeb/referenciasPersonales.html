@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referencias P</title>
+    <link rel="stylesheet" href="./css/estilos.css" >
+    <script src="./js/logica.js"></script>
+</head>
+<body>
+<div class="container">
+
+    <div class="temas">
+            <select id="slcOpciones" onchange="cambioTemas()">
+                <option >selecciona un tema</option>
+                <option value="1">Tema #1</option>
+                <option value="2">Tema #2</option>
+                <option value="3">Tema #3</option>
+            </select>
+        </div>
+
+    <br>
+    <h1 class="titulo">Referencias Personales</h1>
+    <br>
+
+        <table width=100% style="text-align: center;">
+            <tr>
+                <td width=33%>
+                    <div class="contenedor" onclick="ocultarElemento(this, 'rp1')">
+                        <div>
+                            <img class="imagenReferencia" src="./img/Luis.png" alt="Foto Luis">
+                        </div>
+                        <div id="rp1" class="datos">
+                            <h2>Luis Guillermo Quiroz Triviño</h2>
+                            <p><strong>Cargo:</strong> Universidad EAFIT Coordinador</p>
+                            <a href="https://www.linkedin.com/in/luis-guillermo-quiroz-t-54a037a5/">LinkedIn</a>
+                        </div>
+                    </div> 
+                </td>
+                <td width=33%>
+                    <div class="contenedor" onclick="ocultarElemento(this, 'rp2')">
+                        <div>
+                            <img class="imagenReferencia" src="./img/Kevin.png" alt="Foto Kevin">
+                        </div>
+                        <div id="rp2" class="datos">
+                            <h2>Kevin López Ortiz</h2>
+                            <p><strong>Cargo:</strong> Data Engineer Rappi</p>
+                            <a href="https://www.linkedin.com/in/kevin-alveiro-lopez-ortiz-212168122/">LinkedIn</a>
+                        </div>
+                    </div> 
+                </td>
+                <td width=33%>
+                    <div class="contenedor" onclick="ocultarElemento(this, 'rp3')">
+                        <div>
+                            <img class="imagenReferencia" src="./img/aldo.png" alt="Foto Aldo">
+                        </div>
+                        <div id="rp3" class="datos">
+                            <h2>Aldo Esteban Garcés Correa</h2>
+                            <p><strong>Cargo:</strong> Software Engineer at Bancolombia</p>
+                            <a href="https://www.linkedin.com/in/aldo-esteban-garc%C3%A9s-correa-4725b469/">LinkedIn</a>
+                        </div>
+                    </div> 
+                </td>
+            </tr>
+        </table>
+    <br>
+    <br>
+    <br>
+    <nav>
+        <table width=100%>
+            <tr>
+                <td width=25%><a href="./experienciaLaboral.html"><button>Experiencia laboral</button></a></td> 
+                <td width=25%><a href="./index.html"><button>Biografia</button></a></td>
+                <td width=25%><a href="./referenciasFamiliares.html"><button>Referencias familiares</button></a></td>
+                <td width=25%><a href="./estudiosRealizados.html"><button>Estudios realizados</button></a></td>
+            </tr>
+        </table>
+    </nav>
+</div>
+    
+</body>
+</html>

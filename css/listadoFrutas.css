@@ -1,0 +1,48 @@
+.tema1 li:nth-child(2n){
+    background-color: rgb(94, 21, 162);
+}
+
+.tema2 li:nth-child(2n + 1){
+    background-color: rgb(94, 21, 162);
+}
+
+.tarea-boton {
+  width: 200px;
+  padding: 16px;
+  font-size: 18px;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background-color: #2a42a1;
+  color: white;
+  text-transform: capitalize;
+}
+
+.contenedor-botones{
+  display: flex;
+  gap: 10px; /* separación entre botones */
+}
+
+.contenedor-botones button{
+  flex: 1; /* cada botón ocupa una columna */
+}
+
+.contenedor-listado{
+    padding: 16px;
+    font-size: 18px;
+    font-family: Roboto, sans-serif;
+}
+
+.contenedor-pagina{
+  height: 500px;
+  width: 700px;
+  display: grid;
+  place-items: center;
+  border: 5px solid gray;
+  padding: 20px; 
+}

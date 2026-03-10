@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referencias F</title>
+    <link rel="stylesheet" href="./css/estilos.css" >
+    <script src="./js/logica.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="temas">
+            <select id="slcOpciones" onchange="cambioTemas()">
+                <option >selecciona un tema</option>
+                <option value="1">Tema #1</option>
+                <option value="2">Tema #2</option>
+                <option value="3">Tema #3</option>
+            </select>
+        </div>
+
+        <br>
+        <h1 class="titulo">Referencias Familiares</h1>
+        <br>
+
+        <table width=100% style="text-align: center;">
+            <tr>
+                <td width=33%>
+                    <div class="contenedor" onclick="ocultarElemento(this, 'rf1')">
+                        <div>
+                            <img class="imagenReferencia" src="./img/madre.png" alt="imagen madre">
+                        </div>
+                        <div id="rf1" class="datos">
+                            <h2>Mary Luz Ramirez Arboleda</h2>
+                            <p><strong>Familiaridad:</strong> Madre</p>
+                            <p><strong>Telefono: </strong> 318 222 9270</p>
+                        </div>
+                    </div> 
+                </td>
+                <td width=33%>
+                    <div class="contenedor" onclick="ocultarElemento(this, 'rf2')">
+                        <div>
+                            <img class="imagenReferencia" src="./img/tio.png" alt="imagen tio">
+                        </div>
+                        <div id="rf2" class="datos">
+                            <h2>Walter Edgar Ramirez Arboleda</h2>
+                            <p><strong>Familiaridad:</strong> Tio</p>
+                            <p><strong>Telefono: </strong> 300 361 1195</p>
+                        </div>
+                    </div> 
+                </td>
+                <td width=33%>
+                    <div class="contenedor" onclick="ocultarElemento(this, 'rf3')">
+                        <div>
+                            <img class="imagenReferencia" src="./img/pareja.png" alt="imagen pareja">
+                        </div>
+                        <div id="rf3" class="datos">
+                            <h2>Erika Romero Gomez</h2>
+                            <p><strong>Familiaridad:</strong> Pareja</p>
+                            <p><strong>Telefono: </strong> 311 327 1909</p>
+                        </div>
+                    </div> 
+                </td>
+            </tr>
+        
+        </table>
+
+        <br>
+        <br>
+        <br>
+        <nav>
+            <table width=100%>
+                <tr>
+                    <td width=25%><a href="./experienciaLaboral.html"><button>Experiencia laboral</button></a></td>
+                    <td width=25%><a href="./referenciasPersonales.html"><button>Referencias personales</button></a></td>
+                    <td width=25%><a href="./index.html"><button>Biografia</button></a></td>
+                    <td width=25%><a href="./estudiosRealizados.html"><button>Estudios realizados</button></a></td>
+                </tr>
+            </table>
+        </nav>
+
+    </div>
+</body>
+</html>

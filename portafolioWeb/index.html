@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hoja de vida</title>
+    <link rel="stylesheet" href="./css/estilos.css" >
+    <script src="./js/logica.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+        
+        <div class="temas">
+            <select id="slcOpciones" onchange="cambioTemas()">
+                <option >selecciona un tema</option>
+                <option value="1">Tema #1</option>
+                <option value="2">Tema #2</option>
+                <option value="3">Tema #3</option>
+            </select>
+        </div>
+
+        <table width=100%>
+        <tr>
+            <td width=30%><img src="./img/foto.png" alt="Foto hoja de vida"></td>
+            <td width=70%>
+                <h1>Johan Esteban Restrepo Ramirez</h1>
+                <p><strong>Celular:</strong> +57 314 814 6607</p>
+                <p><strong>Perfil:</strong> Ingeniero de sistemas e informatica</p>
+                <p><strong>Ciudad:</strong> Medellín</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/JohanRestrepo">/JohanRestrepo</a></p>
+                <a href="./extra/HojaVida-1152696839-2026.pdf" download="HojaVida-johan.pdf">Descargar en PDF</a>
+            </td>
+        </tr>
+        </table>
+        <h2 style="text-align: center;">Biografia</h2>
+        <br>
+        <p>Soy ingeniero de sistemas e informatica graduado de la <strong>universidad nacional de colombia</strong> en el 2018.</p>
+        <p>Mi primer oportundiad laboral surgio en <strong>EAFIT</strong> cuando me presente como prestador de servicios, 
+        les gusto como trabajaba y me dejaron fijo, pese a que mi trabajo principal no era de programacion en algunos proyectos ocasionales o 
+        en mi tiempo libre  segui investigando y programando.</p>
+        <p>Con el tiempo me han surgido muchas oportunidades pero mi objetivo actual es enfocarme totalemnte en la programacion, ser parte de un
+        equipo que me permita aprender y mejorar mi perfil, mi meta mas proxima es mejorar mis habilidades en el back con java y Springboot
+        </p>
+        <br>
+        <h3>Hobbies</h3>
+        <p>En mi tiempo libre me gusta manejar mi moto y conocer espacio cerca de medellin que sean interesantes y que se relaciones con un viaje
+            divertido y experiencias inolvidables, ademas de que me gusta practicar tiro con arco con la meta de llegar a dispar a blancos de mas de 50 mtrs.
+        </p>
+        <br>
+        <h2 style="text-align: center;">Conoce mas sobre mi</h2>
+        <nav>
+            <table width=100%>
+                <tr>
+                    <td width=25%><a href="./experienciaLaboral.html"><button>Experiencia laboral</button></a></td>
+                    <td width=25%><a href="./referenciasPersonales.html"><button>Referencias personales</button></a></td>
+                    <td width=25%><a href="./referenciasFamiliares.html"><button>Referencias familiares</button></a></td>
+                    <td width=25%><a href="./estudiosRealizados.html"><button>Estudios realizados</button></a></td>
+                </tr>
+            </table>
+
+            <table width=100%>
+                <tr>
+                    <td width=35%></td>
+                    <td width=30%><a href="./talleres/taller1.html"><button>Portafolio</button></a></td>
+                    <td width=35%></td>
+                </tr>
+            </table>
+        </nav>
+    </div>
+    
+    
+</body>
+</html>

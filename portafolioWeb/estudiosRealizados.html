@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudios</title>
+    <link rel="stylesheet" href="./css/estilos.css" >
+    <script src="./js/logica.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="temas">
+            <select id="slcOpciones" onchange="cambioTemas()">
+                <option >selecciona un tema</option>
+                <option value="1">Tema #1</option>
+                <option value="2">Tema #2</option>
+                <option value="3">Tema #3</option>
+            </select>
+        </div>
+        
+        <br>
+        <h1 class="titulo">Estudios</h1>
+        <br>
+        <p>
+            He tenido la fortuna de contar con multiples estudios que han moldeado poco a poco mi persona permitiendome afrontar nuevos retos
+        </p>
+        <br>
+
+        <div class="contenedor" onclick="ocultarElemento(this, 'est1')">
+            <div class="cabecera">Udemy</div>
+            <div id="est1">
+                <table width=100%>
+                    <tr>
+                        <td style="text-align: center;" class="borde" width=40%>
+                        <p><i>2018-2026</i></p>
+                        <p><strong>Tipo de estudio:</strong>Cursos de crecimiento profesional</p>
+                        </td>
+                        <td class="borde" width=60%>
+                            <h4>Temas:</h4>
+                            <br>
+                            <ul>
+                                <li>Arquitectura limpia</li>
+                                <li>Springboot</li>
+                                <li>Angular</li>
+                                <li>AWS</li>
+                                <li>Metodologias agiles</li>
+                                <li>Habilidades blandas</li>
+                                <li>Java</li>
+                                <li>Python</li>
+                                <li>HTML</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br>
+
+        <div class="contenedor" onclick="ocultarElemento(this, 'est2')">
+            <div class="cabecera">Universidad nacional de colombia</div>
+            <div id="est2">
+                <table width=100%>
+                    <tr>
+                        <td style="text-align: center;" class="borde" width=40%>
+                        <p><i>2012 - 2018</i></p>
+                        <p><strong>Tipo de estudio:</strong>Pregrado en ingenieria de sistemas e informatica</p>
+                        </td>
+                        <td class="borde" width=60%>
+                            <h4>Temas:</h4>
+                            <br>
+                            <ul>
+                                <li>Programacion en Java</li>
+                                <li>Levantamiento de requisitos</li>
+                                <li>Trabajo en equipo con metodologias agiles</li>
+                                <li>Modelamiento de requisitos</li>
+                                <li>Manejo de herramientas de versionamiento GIT</li>
+                                <li>Planeacion y ejecucion de proyectos</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br>
+
+        <div class="contenedor" onclick="ocultarElemento(this, 'est3')">
+            <div class="cabecera">Institucion Educativa Julio Cesar Garcia</div>
+            <div id="est3">
+                <table width=100%>
+                    <tr>
+                        <td style="text-align: center;" class="borde" width=40%>
+                        <p><i>2010 - 2011</i></p>
+                        <p><strong>Tipo de estudio:</strong>Pregrado en ingenieria de sistemas e informatica</p>
+                        </td>
+                        <td class="borde" width=60%>
+                            <h4>Temas:</h4>
+                            <br>
+                            <ul>
+                                <li>Infraestructura interna de computador</li>
+                                <li>Planeacion y creacion de redes</li>
+                                <li>Conocimeinto en protocolos de comunicacion</li>
+                                <li>Programacion basica</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <nav>
+            <table width=100%>
+                <tr>
+                    <td width=25%><a href="./experienciaLaboral.html"><button>Experiencia laboral</button></a></td>
+                    <td width=25%><a href="./referenciasPersonales.html"><button>Referencias personales</button></a></td>
+                    <td width=25%><a href="./referenciasFamiliares.html"><button>Referencias familiares</button></a></td>
+                    <td width=25%><a href="./index.html"><button>Biografia</button></a></td>
+                </tr>
+            </table>
+        </nav>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>taller2</title>
+    <link rel="stylesheet" href="../css/estilos.css" >
+    <script src="../js/logica.js"></script>
+</head>
+<body class="talleres">
+    <div class="container">
+        <h1 class="titulo">Taller de PSeInt #2: Condicionales</h1>
+        <br>
+
+        <p class="pregunta"><strong>1, 2 y 3.</strong> Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla <i>[Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta</i>. Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: <i>[Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.</i></p>
+        <pre><code>
+        Proceso sin_titulo
+            Definir edad Como Entero;
+            Definir nombre Como Caracter;
+            Definir apellidos Como Caracter;
+            
+            Escribir "Por favor ingresa tu nombre";
+            Leer nombre;
+            Escribir "Por favor ingresa tus apellidos";
+            Leer apellidos;
+            Escribir "Por favor ingresa tu edad";
+            Leer edad;
+            
+            Si edad >= 18 Entonces
+                Escribir nombre, " ", apellidos, " usted es mayor de edad, por lo tanto puede entrar a la fiesta.";
+            SiNo
+                Escribir nombre, " ", apellidos, " usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.";
+            FinSi
+        FinProceso
+        </code></pre>
+        <br>
+
+        <p class="pregunta"><strong>4.</strong> La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</p>
+        <pre><code>
+        Proceso sin_titulo
+	
+            Definir opcion Como Entero;
+            Definir nombrePelicula Como Caracter;
+            Definir anotacion Como Logico;
+            
+            Escribir "Bienvenido a la video tienda barrio el porvenir";
+            
+            Escribir "¿Que deseas hacer el dia de hoy?";
+            Escribir "1. Alquilar pelicula";
+            Escribir "2. Consultar películas disponibles";
+            Escribir "3. Recibir película";
+            Leer opcion;
+            
+            Segun opcion Hacer
+                1:
+                    Escribir "Que pelicula deseas alquilar?";
+                    Leer nombrePelicula;
+                2:
+                    Escribir "Actualmente tenemos en nuestro Stock disponible:";
+                    Escribir "El viaje del chigüiro";
+                    Escribir "Mi vecino Toreto";
+                    Escribir "Ay caramba, Biografia de BJS";
+                3:
+                    Escribir "¿Que pelicula recibiras?";
+                    Leer nombrePelicula;
+                    Escribir "Deseas realizar alguna anotacion de la pelicula: " , nombrePelicula;
+                    Leer anotacion;
+                    Si anotacion Entonces
+                        Escribir "¿Que anotacion deseas realizar?";
+                    SiNo
+                        Escribir "Gracias que vuelvas pronto";
+                    FinSi
+                De Otro Modo:
+                    Escribir "Opcion elegida no existe";
+            FinSegun
+        FinProceso
+        </code></pre>
+        <br>
+
+        <p class="pregunta"><strong>5.</strong> La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se presenten.</p>
+        <pre><code>
+        Proceso sin_titulo
+
+            Definir opcion Como Entero;
+            Definir opcionProducto Como Entero;
+            Definir nombreProducto Como Caracter;
+            
+            Escribir "Bienvenido a la Drogueria Mi Salud de la localidad Suba";
+            Escribir "";
+            
+            Escribir "¿Que deseas hacer el dia de hoy?";
+            Escribir "1. Comprar producto";
+            Escribir "2. Consultar precio por producto";
+            Escribir "3. Devolucion de productos";
+            Leer opcion;
+            
+            Segun opcion Hacer
+                1:
+                    Escribir "Que producto deseas adquirir?";
+                    Leer nombreProducto;
+                2:
+                    Escribir "¿Que producto deseas verificar el precio?";
+                    Escribir "1. Vitamina C";
+                    Escribir "2. Pastillas antimareo";
+                    Escribir "3. Protector Solar";
+                    Leer opcionProducto;
+                    
+                    Segun opcionProducto Hacer
+                        1:
+                            Escribir "El valor de la Vitamina C es de 1000 pesos";
+                        2:
+                            Escribir "El valor de la Pastillas Antimareo es de 1500 pesos";
+                        3:
+                            Escribir "El valor de la Protector Solar es de 10000 pesos";
+                    FinSegun
+                3:
+                    Escribir "¿Que producto deseas devolver?";
+                De Otro Modo:
+                    Escribir "Opcion elegida no existe";
+            FinSegun
+        FinProceso
+
+        </code></pre>
+        <br>
+
+        <p class="pregunta"><strong>6.</strong> El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.</p>
+        <pre><code>
+        Proceso sin_titulo
+	
+            Definir opcion Como Entero;
+            Definir decision Como Logico;
+            Definir observacion Como Caracter;
+            Definir novedad Como Caracter;
+            
+            Escribir "Bienvenido al Maquinista";
+            Escribir "";
+            
+            Escribir "¿Que deseas hacer el dia de hoy?";
+            Escribir "1. Registrar ingreso";
+            Escribir "2. Registrar Salida";
+            Escribir "3. Registrar procedimientos";
+            Leer opcion;
+            
+            Segun opcion Hacer
+                1:
+                    Escribir "Haz registrado ingreso al taller, ¿deseas agregar alguna observacion?";
+                    Leer decision;
+                    
+                    Si decision Entonces
+                        Escribir "Por favor ingresa la observacion";
+                        Leer observacion;
+                    SiNo
+                        Escribir "El ingreso no tendra ninguna observacion, gracias";
+                    FinSi
+                2:
+                    Escribir "Haz registrado salida del taller, ¿deseas agregar alguna novedad?";
+                    Leer decision;
+                    
+                    Si decision Entonces
+                        Escribir "Por favor ingresa la novedad";
+                        Leer novedad;
+                    SiNo
+                        Escribir "La salida se realizara sin novedades";
+                    FinSi
+                3:	
+                    Escribir "Haz seleccionado registro de procedimientos, por favor acontinuacion indica que procesos se realizaron en la moto";
+                De Otro Modo:
+                    Escribir "Opcion elegida no existe";
+            FinSegun
+        FinProceso
+
+        </code></pre>
+        <br>
+
+        <p class="pregunta"><strong>7.</strong> La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso).</p>
+        <pre><code>
+        Proceso sin_titulo
+            Definir peso Como Real;
+            Definir altura Como Real;
+            Definir IMC Como Real;
+            
+            Escribir "Por favor ingresa tu peso en kilos";
+            leer peso;
+            
+            Escribir "Por favor ingresa tu altura en metros";
+            leer altura;
+            
+            IMC <- peso / (altura * altura);
+            Escribir "IMC es: ", IMC;
+            
+            Si IMC <  18.5 Entonces
+                Escribir "Actualmente tienes bajo peso";
+            SiNo
+                Si IMC <= 24.9 Entonces
+                    Escribir "Actualmente tu peso es normal";
+                SiNo
+                    Si IMC <= 29.9 Entonces
+                        Escribir "Actualmente tienes sobre peso";
+                    SiNo
+                        Escribir "Actualmente tienes obesidad";
+                    FinSi
+                FinSi
+            FinSi
+        FinProceso
+
+        </code></pre>
+        <br>
+
+        <p class="pregunta"><strong>8.</strong> El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones. Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas que se registren diariamente.</p>
+        <pre><code>
+        Proceso sin_titulo
+	
+            Definir opcion Como Entero;
+            Definir sabor Como Caracter;
+            Definir porciones Como Entero;
+            Definir decoraciones Como Caracter;
+            Definir decision Como Logico;
+            
+            Escribir "Bienvenido a la pasteleria de Don Carlos el mejor de la ciudad";
+            Escribir "";
+            
+            Escribir "¿Que deseas hacer el dia de hoy?";
+            Escribir "1. Registrar pedido";
+            Escribir "2. Ver tortas disponibles";
+            Escribir "3. Revisar ventas diarias";
+            Leer opcion;
+            
+            Segun opcion Hacer
+                1:
+                    Escribir "Por favor indicanos las caracteristicas de la torta que deseas llevarte";
+                    Escribir "Indica el sabor de la torta";
+                    Leer sabor;
+                    Escribir "indica la catidad de porciones";
+                    Leer porciones;
+                    Escribir "Indica que decoraciones posee la torta";
+                    Leer decoraciones;
+                    Escribir "Tu pedido es: una torta con sabor a ", sabor, " Con la cantidad de porciones de ", porciones , " y decorado con: ", decoraciones;
+                    Escribir "¿Es correcto tu pedido?";
+                    Leer decision;
+                    Si decision Entonces
+                        Escribir "Pedido captado con exito";
+                    SiNo
+                        Escribir "Pedido rechazado por favor reinicia el menu";
+                    FinSi
+                2:
+                    Escribir "Las tortas que hay en Stock son:";
+                    Escribir "Torta Gloton: Sabor: Chocolate Porciones: 12 Decoracion Una dona glaseada encima";
+                    Escribir "Torta Friki: Sabor: Vainilla Porciones: 6 Decoracion Chips con forma de bits";
+                    Escribir "Torta Enamorado: Sabor: chocolate + Fresa Porciones: 12 Decoracion Un corazon de chocolate";
+                3:	
+                    Escribir "Actualmente no se ha vendido nada porque somos una pasteleria ficticia";
+                De Otro Modo:
+                    Escribir "Opcion elegida no existe";
+            FinSegun
+        FinProceso
+
+        </code></pre>
+        <br>
+
+        <p class="pregunta"><strong>9.</strong> El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.</p>
+        <pre><code>
+        Proceso sin_titulo
+	
+            Definir opcion Como Entero;
+            Definir base Como Real;
+            Definir baseMenor Como Real;
+            Definir altura Como Real;
+            Definir resultado Como Real;
+            
+            Escribir "Calculo con Hugo";
+            Escribir "";
+            
+            Escribir "¿Que area deseas calcular?";
+            Escribir "1. Rectángulo";
+            Escribir "2. Triángulo ";
+            Escribir "3. Trapecio";
+            Leer opcion;
+            
+            resultado <- 0;
+                
+            Segun opcion Hacer
+                1:
+                    Escribir "por favor ingresa la base del rectangulo";
+                    Leer base;
+                    Escribir "Por favor ingresa la altura del rectangulo";
+                    Leer altura;
+                    resultado <- base * altura;
+                2:
+                    Escribir "por favor ingresa la base del triangulo";
+                    Leer base;
+                    Escribir "Por favor ingresa la altura del triangulo";
+                    Leer altura;
+                    resultado <- (base * altura)/2;
+                3:	
+                    Escribir "por favor ingresa la base mayor (inferior) del trapecio";
+                    Leer base;
+                    Escribir "por favor ingresa la base menor (superior) del trapecio";
+                    Leer baseMenor;
+                    Escribir "Por favor ingresa la altura del trapecio";
+                    Leer altura;
+                    resultado <- (base * baseMenor)/2 * altura;
+                De Otro Modo:
+                    Escribir "Opcion elegida no existe";	
+            FinSegun
+            
+            Escribir "El area resultante es: " , resultado;
+        FinProceso
+
+        </code></pre>
+        <br>
+
+        <p class="pregunta"><strong>10.</strong> El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.</p>
+        <pre><code>
+        Proceso sin_titulo
+            Definir opcion Como Entero;
+            Definir titular Como Caracter;
+            Definir cantidad Como Entero;
+            Definir login Como Caracter;
+            Definir dinero Como Entero;
+            
+            titular <- "Johan";
+            cantidad <- 10000;
+            
+            Escribir "Por favor ingresa el nombre del titular";
+            Leer login;
+            
+            Si login = titular Entonces
+                Escribir "Bienvenido " , titular ," ¿Que deseas hacer el dia de hoy?";
+                Escribir "1. Realizar un ingreso";
+                Escribir "2. Realizar un retiro";
+                Escribir "3. Cosultar valor";
+                Leer opcion;
+                
+                Segun opcion Hacer
+                    1:
+                        Escribir "Por favor ingresa el valor que deseas ingresar";
+                        Leer dinero;
+                        
+                        Si dinero > 0 Entonces
+                            cantidad <- cantidad + dinero;
+                            Escribir "Ingreso finalizado con exito, nuevo saldo: ", cantidad;
+                        SiNo
+                            Escribir "Por favor ingresa un valor superior a 0 para esta operacion";
+                        FinSi
+                    2:
+                        Escribir "por favor ingresa el valor que deseas retirar";
+                        Leer dinero;
+                        
+                        Si dinero <= cantidad Entonces
+                            cantidad <- cantidad - dinero;
+                            Escribir "retiro finalizado con exito, nuevo saldo: ", cantidad;
+                        SiNo
+                            Escribir "No puedes retirar valores superiores a tu saldo actual";
+                        FinSi
+                    3:	
+                        Escribir "Actualmente en la cuenta hay un valor de: ", cantidad;
+                    De Otro Modo:
+                        Escribir "Opcion elegida no existe";
+                FinSegun
+            SiNo
+                Escribir "El usuario buscado no esta en el sistema";
+            FinSi
+        FinProceso
+
+        </code></pre>
+        <br>
+        <h3 class="titulo3">Video explicativo</h3>
+        <br>
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/ttfpxzBGoMQ?si=Cu2PNY0wdpEfv5Fd" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <nav>
+            <table width=100%>
+                <tr>
+                    <td width=33%><a href="./taller1.html" style="text-decoration: none;"><button>Anterior Taller</button></a></td>
+                    <td width=33%><a href="../index.html" style="text-decoration: none;"><button>Inicio</button></a></td>
+                    <td width=33%><a href="./taller3.html" style="text-decoration: none;"><button>Siguiente Taller</button></a></td>
+                </tr>
+            </table>
+        </nav>
+    </div>
+</body>
+</html>

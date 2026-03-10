@@ -1,0 +1,68 @@
+.pagina-form{
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo-form{
+  font-size: 35px;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.contenedor-form{
+  height: 500px;
+  width: 700px;
+  background-color: rgb(58, 98, 157);
+  display: grid;
+  place-items: center;
+  border: 5px solid gray;
+  padding: 20px; 
+}
+
+.tarea-formulario{
+  display: grid;
+  grid-template-columns: 1fr;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarea-input {
+  width: 350px;
+  font-size: 18px;
+  background-color: white;
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #00471b;
+  outline: none;
+}
+
+.tarea-boton {
+  width: 300px;
+  padding: 16px;
+  font-size: 18px;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background-color: #00471b;
+  color: white;
+  text-transform: capitalize;
+}
+
+.contenedor-botones{
+  display: flex;
+  gap: 10px; /* separación entre botones */
+}
+
+.contenedor-botones button{
+  flex: 1; /* cada botón ocupa una columna */
+}

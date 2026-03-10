@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencia</title>
+    <link rel="stylesheet" href="./css/estilos.css" >
+    <script src="./js/logica.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="temas">
+            <select id="slcOpciones" onchange="cambioTemas()">
+                <option >selecciona un tema</option>
+                <option value="1">Tema #1</option>
+                <option value="2">Tema #2</option>
+                <option value="3">Tema #3</option>
+            </select>
+        </div>
+
+        <h1 class="titulo">Experiencia Laboral</h1>
+        <br>
+        <p>En mi trayectoria como profesional he tenido oportunidad de relacionarme con diferentes empresas y desempeñar multiples cargos que han
+            impulsado mi crecimiento como profesional.
+        </p>
+        <br>
+        <br>
+
+        <div class="contenedor" onclick="ocultarElemento(this, 'exp1')">
+            <div class="cabecera">ITIS</div>
+            <div id="exp1">
+                <table width=100%>
+                    <tr>
+                        <td style="text-align: center;" class="borde" width=40%>
+                        <p><i>2023 - 2025</i></p>
+                        <p><strong>Cargo:</strong>Consultor funcional de herramientas Oracle Cloud</p>
+                        </td>
+                        <td class="borde" width=60%>
+                            <h4>Deberes</h4>
+                            <br>
+                            <ul>
+                                <li>Resolución de casos de Eloqua, Sales Cloud, PPM, HCM.</li>
+                                <li>Levantamiento de requisitos, Documentación y control de clientes.</li>
+                                <li>Planeación de proyectos y ejecución.</li>
+                                <li>Python, Angular, AWS (S3 and EC2).</li>
+                                <li>Metodologías agiles (Scrum and Kanban).</li>
+                            </ul>
+                        
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br>
+        <div class="contenedor" onclick="ocultarElemento(this, 'exp2')">
+            <div class="cabecera">RAPPI</div>
+            <div id="exp2">
+                <table width=100%>
+                    <tr>
+                        <td style="text-align: center;" class="borde" width=40%>
+                        <p><i>2022 - 2023</i></p>
+                        <p><strong>Cargo:</strong>Data Scientist Jr</p>
+                        </td>
+                        <td class="borde" width=60%>
+                            <h4>Deberes</h4>
+                            <br>
+                            <ul>
+                                <li>Lanzamiento de experimentos (Canary and Blue-Green methods).</li>
+                                <li>Planeación y ejecución de QA.</li>
+                                <li>Generación de Dashboards en Snowflake.</li>
+                                <li>Análisis y presentación de datos.</li>
+                                <li>Metodologías agiles (Scrum and Kanban).</li>
+                                <li>Documentación de procesos.</li>
+                                <li>Python y MySQL</li>
+                            </ul>
+                        
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br>
+        <div class="contenedor" onclick="ocultarElemento(this, 'exp3')">
+            <div class="cabecera">Universidad EAFIT</div>
+            <div id="exp3">
+                <table width=100%>
+                    <tr>
+                        <td style="text-align: center;" class="borde" width=40%>
+                        <p><i>2017 - 2022</i></p>
+                        <p><strong>Cargo:</strong>Analista de CRM</p>
+                        </td>
+                        <td class="borde" width=60%>
+                            <h4>Deberes</h4>
+                            <br>
+                            <ul>
+                                <li>Administración de herramientas CRM.</li>
+                                <li>Resolución de dudas y gestión del conocimiento.</li>
+                                <li>Liderazgo en proyectos de mejora.</li>
+                                <li>Mantenimiento de la base de datos.</li>
+                                <li>Análisis y presentación de datos.</li>
+                                <li>Implementación de procesos automáticos</li>
+                                <li>Edición de páginas (HTML, CSS y JavaScript).</li>
+                                <li>Java, Swagger y AWS</li>
+                                <li>SOLID y DDD</li>
+                            </ul>
+                        
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br>
+        <div class="contenedor" onclick="ocultarElemento(this, 'exp4')">
+            <div class="cabecera">Universidad Nacional de Colombia</div>
+            <div id="exp4">
+                <table width=100%>
+                    <tr>
+                        <td style="text-align: center;" class="borde" width=40%>
+                        <p><i>2016 - 2017</i></p>
+                        <p><strong>Cargo:</strong>Instructor de Tics 2, Materia de maestría para docentes</p>
+                        </td>
+                        <td class="borde" width=60%>
+                            <h4>Deberes</h4>
+                            <br>
+                            <ul>
+                                <li>Administración de Node.</li>
+                                <li>Diseño e implementación de clases.</li>
+                                <li>Administración y resolución de dudas.</li>
+                                <li>Creación de métodos de evaluación.</li>
+                                <li>Programación en Raspberry Pi</li>
+                            </ul>
+                        
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <nav>
+            <table width=100%>
+                <tr>
+                    <td width=25%><a href="./index.html"><button>Biografia</button></a></td>
+                    <td width=25%><a href="./referenciasPersonales.html"><button>Referencias personales</button></a></td>
+                    <td width=25%><a href="./referenciasFamiliares.html"><button>Referencias familiares</button></a></td>
+                    <td width=25%><a href="./estudiosRealizados.html"><button>Estudios realizados</button></a></td>
+                </tr>
+            </table>
+        </nav>
+
+    </div>
+    
+</body>
+</html>
