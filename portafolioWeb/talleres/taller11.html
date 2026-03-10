@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>taller 11</title>
+    <link rel="stylesheet" href="../css/estilos.css" >
+    <script src="../js/logica.js"></script>
+</head>
+<body class="talleres">
+    <div class="container">
+        <h1 class="titulo">Taller #11: Final</h1>
+        <br>
+
+        <p class="pregunta"><strong>1</strong>	Realizar una calculadora en Java a nivel de programa de consola, donde deberá cumplir con los siguientes items
+        <br>
+        a. La calculadora deberá soportar cualquier cantidad de números tanto positivos como negativos, incluyendo su aprte decimal.
+        <br>
+        b. Las operaciones que debe realizar dicha calculadora son: Sumar, Restar, Multiplicar, Dividir, y Modulo de la división.
+        <br>
+        c. Se debe validar el no poder dividir por cero ya que este tipo de operación no existe.
+        <br>
+        d. El código debe estar documentado
+        </p>
+
+        <pre><code>
+        import java.util.Scanner;
+
+        public class Calculadora {
+
+            static Scanner input = new Scanner(System.in);
+
+            public static boolean valido(double valor){
+                if(valor == 0){//comprobamos si el valor es 0 o 0,0
+                    System.out.println("division por 0, vuelve a intentarlo");
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+
+            public static void prender(){
+
+                //Creamos variables que nos serviran para el funcionamiento base
+                double valorIngresado;
+                String operacion;
+                boolean funciona = true;
+
+                System.out.println("Calculadora prendida por favor empieza a ingresar información");
+                
+                //Inicializamos el objeto registro el cual llevara el valor inicial
+                valorIngresado = input.nextDouble();
+                input.nextLine(); // limpiamos el buffer
+                Calculo registro = new Calculo(valorIngresado);
+
+                //Generamos un ciclo infinito el cual pedira valores hasta que se apague
+                while(funciona){
+                    operacion = input.nextLine();//pedimos la operacion
+                    
+                    //Primero verificamos si se desea apagar
+                    if(operacion.equals("off")){
+                        funciona = false;
+                        System.out.println("Calculadora apagada");
+                    }else{
+                        //En caso contrario tomamos el siguiente numero
+                        valorIngresado = input.nextDouble();
+                        input.nextLine();//limpiamos buffer
+
+                        //decidimos con un switch que funcion llamar en base de la operacion
+                        switch (operacion) {
+                            case "+":
+                                registro.suma(valorIngresado);
+                                break;
+                            case "-":
+                                registro.resta(valorIngresado);
+                                break;
+                            case "*":
+                                registro.multiplicacion(valorIngresado);
+                                break;
+                            case "/":
+                                if(valido(valorIngresado)){ //Comprobamos la division por cero
+                                    registro.division(valorIngresado);
+                                }
+                                break;
+                            case "%":
+                                if (valido(valorIngresado)) { //Comprobamos la division por cero
+                                    registro.modulo(valorIngresado);
+                                }
+                                break;
+                            default:
+                                //en caso de no agregar ninguna operacion conocida
+                                System.out.println("operacion no valida, vuelve a intentarlo"); 
+                                break;
+                        }
+                    }
+                    //informamos sobre el resultado final
+                    System.out.println(registro.valorRegistrado);
+                }
+            }
+
+            public static void main(String[] args) {
+
+                prender();
+
+                input.close();
+
+            }
+        }
+
+        //Tendremos una clase llamada calculo como eje de la app
+        class Calculo{
+            //Tendra de atributo el valor calculado
+            double valorRegistrado;
+
+            //Constructor
+            public Calculo(double valorRegistrado){
+                this.valorRegistrado = valorRegistrado;
+            }
+
+            //Funciones que afectan al valor calculado segun la operacion
+            public void suma(double valor){
+                valorRegistrado += valor;
+            }
+
+            public void resta(double valor){
+                valorRegistrado -= valor;
+            }
+
+            public void multiplicacion(double valor){
+                valorRegistrado *= valor;
+            }
+
+            public void division(double valor){
+                valorRegistrado /= valor;
+            }
+
+            public void modulo(double valor){
+                valorRegistrado %= valor;
+            }
+        }
+        </code></pre>
+        <br>
+        <h3 class="titulo3">Video explicativo</h3>
+        <br>
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/jq_tZFl7RaU?si=2NwuK10y554gEbWU" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <br>
+        <nav>
+            <table width=100%>
+                <tr>
+                    <td width=50%><a href="./taller6.html" style="text-decoration: none;"><button>Anterior Taller</button></a></td>
+                    <td width=50%><a href="../index.html" style="text-decoration: none;"><button>Inicio</button></a></td>
+                </tr>
+            </table>
+        </nav>
+    </div>
+</body>
+</html>
